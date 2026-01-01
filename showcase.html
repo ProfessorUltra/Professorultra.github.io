@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Showcase | My Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">My Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="showcase.html">Showcase</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="container py-5 mt-5">
+
+  <!-- PAGE HEADER -->
+  <header class="mb-5 text-center">
+    <h1 class="fw-bold">Project Showcase</h1>
+    <p class="text-muted mt-2">
+      A selection of real-world projects demonstrating clean design,
+      practical problem solving, and scalable development.
+    </p>
+  </header>
+
+  <!-- PROJECT GRID -->
+  <div class="row g-4">
+
+    <!-- Ecommerce -->
+    <div class="col-md-4" data-category="ecommerce">
+      <div class="card h-100 shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1557821552-17105176677c"
+          class="card-img-top"
+          alt="Ecommerce website project">
+        <div class="card-body">
+          <h5 class="card-title">Ecommerce Platform</h5>
+          <p class="card-text text-muted">
+            A modern online store demo featuring product listings,
+            checkout flow, and responsive UI.
+          </p>
+          <a href="projects/ecommerce.html" class="stretched-link" aria-label="View Ecommerce Project"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking -->
+    <div class="col-md-4" data-category="booking">
+      <div class="card h-100 shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+          class="card-img-top"
+          alt="Booking application interface">
+        <div class="card-body">
+          <h5 class="card-title">Booking Application</h5>
+          <p class="card-text text-muted">
+            A lightweight booking system allowing users to schedule,
+            manage, and confirm appointments.
+          </p>
+          <a href="projects/booking.html" class="stretched-link" aria-label="View Booking Project"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fitness -->
+    <div class="col-md-4" data-category="fitness">
+      <div class="card h-100 shadow-sm">
+<img
+  src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1200&q=80"
+  class="card-img-top"
+  alt="Fitness tracking app interface on mobile device">
+
+        <div class="card-body">
+          <h5 class="card-title">Fitness Tracker</h5>
+          <p class="card-text text-muted">
+            A workout tracking app focused on progress monitoring,
+            training history, and goal setting.
+          </p>
+          <a href="projects/fitness.html" class="stretched-link" aria-label="View Fitness Project"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Service -->
+    <div class="col-md-4" data-category="services">
+      <div class="card h-100 shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+          class="card-img-top"
+          alt="Business service website">
+        <div class="card-body">
+          <h5 class="card-title">DJ Waterproofing</h5>
+          <p class="card-text text-muted">
+            A live business website for a local services company,
+            showcasing offerings, contact flow, and SEO fundamentals.
+          </p>
+          <a href="https://www.djwaterproofing.co.za/" target="_blank" rel="noopener" class="stretched-link" aria-label="Visit DJ Waterproofing Website"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-3">
+        <h5 class="fw-semibold">My Portfolio</h5>
+        <p class="text-secondary small">
+          Designing and building reliable, maintainable software solutions
+          for small and growing businesses.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <h6 class="text-uppercase fw-semibold small">Services</h6>
+        <ul class="list-unstyled small">
+          <li>Web Development</li>
+          <li>Custom Software</li>
+          <li>API Integration</li>
+          <li>Maintenance & Support</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <h6 class="text-uppercase fw-semibold small">Company</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="showcase.html" class="footer-link">Showcase</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h6 class="text-uppercase fw-semibold small">Contact</h6>
+        <p class="text-secondary small mb-0">
+          Email: info@yourcompany.com<br>
+          Location: South Africa
+        </p>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="text-center small text-secondary">
+      &copy; <span id="year"></span> My Portfolio. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="scripts.js" defer></script>
+</body>
+</html>
