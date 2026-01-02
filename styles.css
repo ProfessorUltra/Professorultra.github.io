@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #1e3a8a;     /* Deep Navy Blue */
+  --secondary-color: #64748b;   /* Cool Gray */
+  --accent-color: #10b981;      /* Emerald Green */
+  --background-color: #f9fafb;  /* Soft Off-White */
+  --text-color: #111827;        /* Charcoal Black */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar a {
+  color: #fff !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-success {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+
+  left: 0;
+  width: 100%;
+  z-index: 1030; /* above most content but below modals */
+}
+
+/* Center menu items horizontally in mobile dropdown */ @media (max-width: 991px) { .navbar-nav { text-align: center; width: 100%; } } 
+/* Hide hamburger and collapse menu on desktop */ @media (min-width: 992px) { .navbar-toggler { display: none; } }
+
+/* Center menu items horizontally in the collapsed mobile menu */ @media (max-width: 991.98px) { #navbarNav .navbar-nav { width: 100%; text-align: center; } #navbarNav .nav-item { display: inline-block; margin: 0 .5rem; } } /* Force hamburger icon to be white */ .navbar-dark .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+body { padding-top: 70px;
+  padding-bottom: 140px;}
+
+  html, body { height: 100%; } body { display: flex; flex-direction: column; } main { flex: 1; /* pushes footer to the bottom */ }
+
+  .footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main content grows to take remaining space */
+main {
+  flex: 1;
+  padding-top: 80px; /* account for fixed-top navbar height */
+}
+
+/* Footer styling */
+footer {
+  background-color: #212529; /* dark bg */
+  color: #fff;
+}
+
+main {
+  padding-top: 30px; /* approximate navbar height */
+  padding-bottom: 40px; /* optional extra space above footer */
+}
+
+ /* Typography and spacing */
+    main p {
+      line-height: 1.8;
+      color: #6c757d;
+      font-size: 1rem;
+    }
+
+    main h3 {
+      color: #0d6efd; /* Bootstrap primary color */
+      font-weight: 600;
+    }
+
+    hr.section-divider {
+      border-top: 2px solid #dee2e6;
+      margin: 2rem 0;
+    }
+
+    /* CTA button spacing */
+    .cta-buttons .btn {
+      min-width: 180px;
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600;700&display=swap');
+
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Sora', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #212529;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+/* Hero */
+.page-hero {
+  position: relative;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: #dee2e6;
+  margin: 3.5rem 0;
+}
+
+/* Images */
+.section-image {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+/* CTA */
+.cta-buttons {
+  max-width: 600px;
+  margin: 4rem auto 0;
+}
+
+.card-img-top { height: 250px; /* set the height you want */ object-fit: cover; /* ensures the image fills the area */ }
+
+.contact-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Subtle floating animation */
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aos-float {
+  animation: floatUp 1.2s ease-out forwards;
+}
+
+/* styles.css */
+section.text-center.px-md-5 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* styles.css */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
