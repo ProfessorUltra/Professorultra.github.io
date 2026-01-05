@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Demo | CotForge</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .card-title i {
+      color: #0d6efd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#">CotForge</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="#">CRUD Demo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Calendar Demo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">API Demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:90px;">
+    <section class="py-5">
+      <div class="container">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
+          <div class="card-body">
+            <h1 class="card-title mb-4"><i class="fas fa-boxes me-2"></i>CRUD Demo: Product Manager</h1>
+            <p class="text-muted mb-4">
+              Add, edit, or remove products dynamically. Demonstrates CRUD operations, form validation, and responsive tables.
+            </p>
+
+            <form id="crudForm" class="row g-2 mb-3">
+              <div class="col-md-5">
+                <input type="text" id="productName" class="form-control" placeholder="Product Name" required>
+              </div>
+              <div class="col-md-5">
+                <input type="number" id="productPrice" class="form-control" placeholder="Price" required>
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-plus"></i></button>
+              </div>
+            </form>
+
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered align-middle text-center mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="productTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start small text-secondary">
+        <div>&copy; <span id="year"></span> CotForge. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+  <script>
+    AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const products = [];
+    const form = document.getElementById('crudForm');
+    const table = document.getElementById('productTable');
+
+    function renderTable() {
+      table.innerHTML = '';
+      products.forEach((p, i) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${p.name}</td>
+          <td>$${p.price.toFixed(2)}</td>
+          <td>
+            <button class="btn btn-sm btn-warning me-1" onclick="editProduct(${i})"><i class="fas fa-edit"></i></button>
+            <button class="btn btn-sm btn-danger" onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i></button>
+          </td>`;
+        table.appendChild(row);
+      });
+    }
+
+    function editProduct(index) {
+      const newName = prompt('New product name', products[index].name);
+      const newPrice = parseFloat(prompt('New product price', products[index].price));
+      if (newName && !isNaN(newPrice)) {
+        products[index] = { name: newName, price: newPrice };
+        renderTable();
+      }
+    }
+
+    function deleteProduct(index) {
+      products.splice(index, 1);
+      renderTable();
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('productName').value;
+      const price = parseFloat(document.getElementById('productPrice').value);
+      if (name && !isNaN(price)) {
+        products.push({ name, price });
+        form.reset();
+        renderTable();
+      }
+    });
+  </script>
+</body>
+
+</html>
