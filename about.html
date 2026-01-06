@@ -1,144 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CotForge Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/cf favicon 32x32.png" sizes="32x32" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cothill Digital Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Service card hover */
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      cursor: pointer;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(145deg, #f9f9f9, #e6f0ff);
-    }
-
-    .service-card img {
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Limit text width for readability */
-    .text-center.px-md-5 {
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Hero buttons hover */
-    .hero-buttons a {
-      transition: transform 0.3s ease;
-    }
-
-    .hero-buttons a:hover {
-      transform: translateY(-3px);
-    }
-
-    /* CTA section adjustments */
-    .cta-section {
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-
-    .cta-section h4 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta-section p {
-      font-size: 1.1rem;
-      color: #6c757d;
-      margin-bottom: 1.5rem;
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="index.html">Cothill Digital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Services
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded">
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
-              <li><a class="dropdown-item" href="custom-software.html">Custom Software</a></li>
-              <li><a class="dropdown-item" href="api-integration.html">API Integration</a></li>
-              <li><a class="dropdown-item" href="maintenance-support.html">Maintenance & Support</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="showcase.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary px-3" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- Hero -->
-    <section class="hero-banner position-relative text-light d-flex align-items-center" style="
-           background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80'); 
-           background-size: cover;
-           background-position: center;
-           height:400px;
-         ">
-
-      <!-- Overlay -->
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
-
-      <!-- Content -->
-      <div class="container text-center position-relative">
-
-        <!-- Hero Title -->
-        <h1 class="fw-bold display-4 mb-3 aos-float" data-aos="fade-down" data-aos-duration="1200">
-          About Cothill Digital
-        </h1>
-
-        <!-- Hero Description -->
-        <p class="lead mb-4 text-white" style="max-width:700px; margin:auto;" data-aos="fade-up"
-          data-aos-duration="1200" data-aos-delay="200">
-          We design and build reliable, modern software solutions for growing businesses.
-        </p>
-
-        <!-- Hero Buttons -->
-        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center aos-float" data-aos="fade-up"
-          data-aos-delay="400" data-aos-duration="1200">
-          <a href="showcase.html" class="btn btn-primary btn-lg shadow-sm">View Our Work</a>
-          <a href="contact.html" class="btn btn-outline-light btn-lg shadow-sm">Get a Quote</a>
+  <body>
+<nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <!-- Logo icon -->
+          <img
+            src="images/cf logo.jpg"
+            alt="CotForge Logo"
+            width="30"
+            height="30"
+            class="me-2"
+          />
+          CotForge</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded"
+              >
+                <li>
+                  <a class="dropdown-item" href="web-development.html"
+                    >Web Development</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="custom-software.html"
+                    >Custom Software</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="api-integration.html"
+                    >API Integration</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="system-modernization.html"
+                    >System Modernization &amp; Performance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="maintenance-support.html"
+                    >Maintenance & Support</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="showcase.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary px-3" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
+    <main>
+      <!-- Hero -->
+      <section
+        class="hero-banner position-relative text-light d-flex align-items-center"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80');
+          background-size: cover;
+          background-position: center;
+          height: 400px;
+        "
+      >
+      <!-- <section
+        class="hero-banner position-relative text-light d-flex align-items-center"
+        style="
+          background-image: url('images/daniil-komov-dma_e1UKkig-unsplash.jpg?auto=format&fit=crop&w=1950&q=80');
+          background-size: cover;
+          background-position: center;
+          height: 400px;
+        "
+      > -->
+        <!-- Overlay -->
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="background: rgba(0, 0, 0, 0.55)"
+        ></div>
+
+        <!-- Content -->
+        <div class="container text-center position-relative">
+          <!-- Hero Title -->
+          <h1
+            class="fw-bold display-4 mb-3 aos-float"
+            data-aos="fade-down"
+            data-aos-duration="1200"
+          >
+            About CotForge
+          </h1>
+
+          <!-- Hero Description -->
+          <p
+            class="lead mb-4 text-white"
+            style="max-width: 700px; margin: auto"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
+            We design and build reliable, modern software solutions for growing
+            businesses.
+          </p>
+
+          <!-- Hero Buttons -->
+          <div
+            class="d-flex flex-column flex-md-row gap-3 justify-content-center aos-float"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1200"
+          >
+            <a href="showcase.html" class="btn btn-primary btn-lg shadow-sm"
+              >View Our Work</a
+            >
+            <a
+              href="contact.html"
+              class="btn btn-outline-light btn-lg shadow-sm"
+              >Get a Quote</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="container pt-5 mt-5">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="circle-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h2 class="card-title" data-aos="fade-up">Our Mission</h2>
+              <p class="card-text" data-aos="fade-up">
+                CotForge transforms business ideas into scalable, dependable
+                software that drives efficiency and sustainable growth.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="circle-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h2 class="card-title" data-aos="fade-up">Our Expertise</h2>
+              <p class="card-text" data-aos="fade-up">
+                We deliver custom digital solutions that solve real challenges,
+                streamline workflows, and scale with your business.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <!-- <div class="col-md-4">
+            <div class="card h-100" data-aos="fade-up">
+              <div class="circle-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h2 class="card-title" data-aos="fade-up">Our Vision</h2>
+              <p class="card-text" data-aos="fade-up">
+                CotForge envisions being the trusted technology partner that
+                delivers reliable, impactful software for lasting growth.
+              </p>
+            </div>
+          </div> -->
+
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="circle-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h2 class="card-title" data-aos="fade-up">Our Approach</h2>
+              <p class="card-text" data-aos="fade-up">
+                Transparent, collaborative software development that delivers
+                aligned solutions with no surprises.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </section>
+      <!-- <section class="container my-5">
 
-    <!-- Mission Section -->
-    <section class="container my-5">
-
-      <h2 class="fw-bold mb-3" data-aos="fade-right">Our Mission</h2>
-      <p data-aos="fade-left">At <strong>Cothill Digital</strong>, our mission is to transform business ideas into
+      <h2 class="fw-bold mb-3 text-primary" data-aos="fade-right">Our Mission</h2>
+      <p data-aos="fade-up">At <strong>CotForge</strong>, our mission is to transform business ideas into
         dependable, scalable digital products. We focus on building software that solves real problems, improves
         efficiency, and supports long-term growth.</p>
-      <p data-aos="fade-left" data-aos-delay="100">Every solution we deliver is thoughtfully designed, engineered with
+      <p data-aos="fade-up" data-aos-delay="100">Every solution we deliver is thoughtfully designed, engineered with
         care, and aligned with the practical needs of our clients.</p>
 
       <div class="section-image text-center mt-4" data-aos="zoom-in" data-aos-delay="200">
@@ -149,12 +244,12 @@
 
     <hr class="section-divider">
 
-    <!-- Expertise -->
+    
     <section class="container my-5" data-aos="fade-up">
-      <h2 class="fw-bold mb-3" data-aos="fade-right">Our Expertise</h2>
-      <p data-aos="fade-left">We specialise in custom web applications, internal business tools, and system
+      <h2 class="fw-bold mb-3 text-primary" data-aos="fade-right">Our Expertise</h2>
+      <p data-aos="fade-up">We specialise in custom web applications, internal business tools, and system
         integrations. Our work spans e-commerce platforms, booking systems, dashboards, and workflow automation.</p>
-      <p data-aos="fade-left" data-aos-delay="100">By following modern development standards and writing clean,
+      <p data-aos="fade-up" data-aos-delay="100">By following modern development standards and writing clean,
         maintainable code, we ensure that every project is secure, performant, and ready to evolve as your business
         grows.</p>
 
@@ -166,9 +261,9 @@
 
     <hr class="section-divider">
 
-    <!-- Approach -->
+    
     <section class="container my-5" data-aos="fade-up">
-      <h2 class="fw-bold mb-3" data-aos="fade-up">Our Approach</h2>
+      <h2 class="fw-bold mb-3 text-primary" data-aos="fade-up">Our Approach</h2>
       <p data-aos="fade-up">We take a transparent, collaborative approach to software development. From discovery to
         deployment, clients are kept informed and involved through clear communication and iterative progress.</p>
       <p data-aos="fade-up" data-aos-delay="100">This ensures fewer surprises, better alignment, and solutions that
@@ -182,90 +277,164 @@
 
     <hr class="section-divider">
 
-    <!-- Vision -->
+    
     <section class="container my-5" data-aos="fade-up">
-      <h2 class="fw-bold mb-3" data-aos="fade-up">Our Vision</h2>
+      <h2 class="fw-bold mb-3 text-primary" data-aos="fade-up">Our Vision</h2>
       <p data-aos="fade-up">Our vision is to become a trusted long-term technology partner for businesses that value
         quality, reliability, and thoughtful engineering.</p>
       <p data-aos="fade-up" data-aos-delay="100">Whether you are launching a new product or improving existing
-        systems, Cothill Digital is committed to delivering software that creates measurable impact.</p>
-    </section>
+        systems, CotForge is committed to delivering software that creates measurable impact.</p>
+    </section> -->
 
-    <!-- CTA -->
-    <div class="cta-buttons d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 py-5"
-      data-aos="fade-up" data-aos-delay="200">
-      <a href="showcase.html" class="btn btn-primary btn-lg w-100 w-md-auto">View Our Work</a>
-      <a href="contact.html" class="btn btn-outline-primary btn-lg w-100 w-md-auto">Contact Us</a>
-    </div>
+      <!-- CTA -->
+      <section class="cta-section py-5 mt-5 bg-dark text-light text-center">
+        <div class="container">
+          <h3 class="fw-bold mb-3 text-primary">
+            Ready to Build Something Great?
+          </h3>
 
-  </main>
+          <p class="card-text mb-4 text-white">
+            Whether you need a custom application, a website redesign, or
+            ongoing support — we’re here to bring your vision to life.
+          </p>
 
-  <footer class="bg-dark text-light pt-5 pb-4 mt-5">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="fw-semibold">Cothill Digital</h5>
-          <p class="text-secondary small">We design, build, and maintain reliable software solutions for small and
-            growing businesses.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg px-4">
+            Contact Us
+          </a>
         </div>
-        <div class="col-6 col-md-3 col-lg-3">
-          <h6 class="text-uppercase fw-semibold small">Services</h6>
-          <ul class="list-unstyled small">
-            <li><a href="web-development.html" class="footer-link text-secondary">Web Development</a></li>
-            <li><a href="custom-software.html" class="footer-link text-secondary">Custom Software</a></li>
-            <li><a href="api-integration.html" class="footer-link text-secondary">API Integration</a></li>
-            <li><a href="maintenance-support.html" class="footer-link text-secondary">Maintenance & Support</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3 col-lg-3">
-          <h6 class="text-uppercase fw-semibold small">Quick Links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="about.html" class="footer-link text-secondary">About</a></li>
-            <li><a href="showcase.html" class="footer-link text-secondary">Case Studies</a></li>
+      </section>
+    </main>
 
-            <li><a href="contact.html" class="footer-link text-secondary">Contact</a></li>
-          </ul>
+    <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="fw-semibold text-primary">CotForge</h5>
+            <p class="text-secondary small">
+              We design, build, and maintain reliable software solutions for
+              small and growing businesses.
+            </p>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <h6 class="text-uppercase fw-semibold small text-primary">Services</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a
+                  href="web-development.html"
+                  class="footer-link text-secondary"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="custom-software.html"
+                  class="footer-link text-secondary"
+                  >Custom Software</a
+                >
+              </li>
+              <li>
+                <a
+                  href="api-integration.html"
+                  class="footer-link text-secondary"
+                  >API Integration</a
+                >
+              </li>
+              <li>
+                <a
+                  href="maintenance-support.html"
+                  class="footer-link text-secondary"
+                  >Maintenance & Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <h6 class="text-uppercase fw-semibold small text-primary">Quick Links</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="about.html" class="footer-link text-secondary"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="showcase.html" class="footer-link text-secondary"
+                  >Case Studies</a
+                >
+              </li>
+
+              <li>
+                <a href="contact.html" class="footer-link text-secondary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="text-uppercase fw-semibold small text-primary">Contact</h6>
+            <ul class="list-unstyled small text-secondary">
+              <li>
+                Email:
+                <a
+                  href="mailto:info@cotforge.com"
+                  class="footer-link text-secondary"
+                  >info@cotforge.com</a
+                >
+              </li>
+              <li>
+                Phone:
+                <a href="tel:+27831234567" class="footer-link text-secondary"
+                  >+27 83 123 4567</a
+                >
+              </li>
+              <li>
+                Location:
+                <a
+                  href="https://goo.gl/maps/..."
+                  target="_blank"
+                  class="footer-link text-secondary"
+                  >South Africa</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <h6 class="text-uppercase fw-semibold small">Contact</h6>
-          <ul class="list-unstyled small text-secondary">
-            <li>Email: <a href="mailto:info@cothilldigital.com"
-                class="footer-link text-secondary">info@cothilldigital.com</a></li>
-            <li>Phone: <a href="tel:+27831234567" class="footer-link text-secondary">+27 83 123 4567</a></li>
-            <li>Location: <a href="https://goo.gl/maps/..." target="_blank" class="footer-link text-secondary">South
-                Africa</a></li>
-          </ul>
+
+        <hr class="border-secondary my-4" />
+
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start small text-secondary"
+        >
+          <div>
+            &copy; <span id="year"></span> CotForge. All rights reserved.
+          </div>
+          <div class="mt-2 mt-md-0">
+            <a
+              href="privacy-policy.html"
+              class="footer-link me-3 text-secondary"
+              >Privacy Policy</a
+            >
+            <a href="terms-conditions.html" class="footer-link text-secondary"
+              >Terms of Service</a
+            >
+          </div>
         </div>
       </div>
+    </footer>
 
-      <hr class="border-secondary my-4">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 
-      <div
-        class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start small text-secondary">
-        <div>&copy; <span id="year"></span> Cothill Digital. All rights reserved.</div>
-        <div class="mt-2 mt-md-0">
-          <a href="privacy-policy.html" class="footer-link me-3 text-secondary">Privacy Policy</a>
-          <a href="terms-conditions.html" class="footer-link text-secondary">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-in-out",
+      });
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="scripts.js"></script>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-in-out',
-    });
-
-    // Dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-
+      // Dynamic year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

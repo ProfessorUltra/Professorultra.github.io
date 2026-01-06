@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Card Grid</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .card-custom {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .circle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background-color: #4a90e2;
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1030;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-content h2 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    @media (max-width: 576px) {
+      .circle {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <h1>Bootstrap Card Grid</h1>
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card-custom">
+          <div class="circle"></div>
+          <div class="card-content">
+            <h2>Card One</h2>
+            <p>Circle center aligned to top-right corner.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card-custom">
+          <div class="circle"></div>
+          <div class="card-content">
+            <h2>Card Two</h2>
+            <p>Responsive layout using Bootstrap grid.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card-custom">
+          <div class="circle"></div>
+          <div class="card-content">
+            <h2>Card Three</h2>
+            <p>Works seamlessly across devices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional for components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
