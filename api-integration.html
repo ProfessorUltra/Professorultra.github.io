@@ -9,41 +9,93 @@
   <link rel="stylesheet" href="styles.css">
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="images/cf favicon 32x32.png" sizes="32x32" />
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="index.html">CotForge</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Services
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded">
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
-              <li><a class="dropdown-item" href="custom-software.html">Custom Software</a></li>
-              <li><a class="dropdown-item" href="api-integration.html">API Integration</a></li>
-              <li><a class="dropdown-item" href="maintenance-support.html">Maintenance & Support</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="showcase.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary px-3" href="contact.html">Contact</a></li>
-        </ul>
+<nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <!-- Logo icon -->
+          <img
+            src="images/cf logo.jpg"
+            alt="CotForge Logo"
+            width="30"
+            height="30"
+            class="me-2"
+          />
+          CotForge</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded"
+              >
+                <li>
+                  <a class="dropdown-item" href="web-development.html"
+                    >Web Development</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="custom-software.html"
+                    >Custom Software</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="api-integration.html"
+                    >API Integration</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="system-modernization.html"
+                    >System Modernization &amp; Performance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="maintenance-support.html"
+                    >Maintenance & Support</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="showcase.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary px-3" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <!-- Hero -->
   <!-- <section class="hero-banner text-light d-flex align-items-center position-relative" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80'); 
                   min-height: 50vh; background-size: cover; background-position: center;"> -->
-
+<main>
                     <section class="hero-banner text-light d-flex align-items-center position-relative" 
                     style="background-image: url('images/aconitum-9IqiV6Rt0sg-unsplash.jpg?auto=format&fit=crop&w=1950&q=80'); 
                   min-height: 50vh; background-size: cover; background-position: center;">
@@ -51,7 +103,7 @@
     <div class="container text-center position-relative" style="max-width: 900px; padding: 0 1rem; z-index: 2;">
       <h1 class="fw-bold mb-3" data-aos="fade-down" data-aos-duration="1200" style="font-size: clamp(2rem,5vw,3rem);">
         API Integration</h1>
-      <p class="lead mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200"
+      <p class="lead mb-4 text-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200"
         style="line-height:1.6; font-size: clamp(1rem,2vw,1.25rem);">
         Seamlessly connect your systems and services with custom API integrations that save time and reduce errors.
       </p>
@@ -59,24 +111,72 @@
   </section>
 
   <!-- Content -->
-  <section class="py-5 bg-light" data-aos="fade-up">
-    <div class="container" style="max-width:900px;">
-      <h2 class="fw-semibold text-primary mb-3" data-aos="fade-up">Connecting Platforms</h2>
-      <p data-aos="fade-up">We integrate third-party APIs to extend functionality, automate workflows, and enhance user
-        experience.</p>
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+       <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="card h-100 p-4 shadow-sm text-center">
+              <i class="fa-solid fa-screwdriver-wrench fa-2x text-primary mb-3"></i>
+              <h5 class="fw-semibold">Connecting Platforms</h5>
+              <p class="small card-text">
+                We integrate third-party APIs to extend functionality, automate workflows, and enhance user
+        experience.
+              </p>
+            </div>
+          </div>
 
-      <h2 class="fw-semibold text-primary mb-3 mt-4" data-aos="fade-up">Custom API Development</h2>
-      <p data-aos="fade-up">Where needed, we develop custom APIs to allow secure and reliable communication between your
-        systems.</p>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 p-4 shadow-sm text-center">
+              <i class="fa-solid fa-plug-circle-bolt fa-2x text-primary mb-3"></i>
+              <h5 class="fw-semibold">Custom API Development</h5>
+              <p class="small card-text">
+                Where needed, we develop custom APIs to allow secure and reliable communication between your
+        systems.
+              </p>
+            </div>
+          </div>
 
-      <h2 class="fw-semibold text-primary mb-3 mt-4" data-aos="fade-up">Security & Reliability</h2>
-      <p data-aos="fade-up">All integrations are built with best practices, ensuring secure, stable, and scalable
-        connections.</p>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 p-4 shadow-sm text-center">
+              <i class="fa-solid fa-chart-simple fa-2x text-primary mb-3"></i>
+              <h5 class="fw-semibold">Security & Reliability</h5>
+              <p class="small card-text">
+                All integrations are built with best practices, ensuring secure, stable, and scalable
+        connections.
+              </p>
+            </div>
+          </div>
 
-      <h2 class="fw-semibold text-primary mb-3 mt-4" data-aos="fade-up">Ongoing Support</h2>
-      <p data-aos="fade-up">We provide monitoring and support to keep your integrations performing optimally.</p>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 p-4 shadow-sm text-center">
+              <i class="fa-solid fa-shield-halved fa-2x text-primary mb-3"></i>
+              <h5 class="fw-semibold">Ongoing Support</h5>
+              <p class="small card-text">
+               We provide monitoring and support to keep your integrations performing optimally
+              </p>
+            </div>
+          </div>
+        </div>
     </div>
   </section>
+
+        <section class="cta-section py-5 bg-dark text-light text-center">
+        <div class="container">
+          <h3 class="fw-bold mb-3 text-primary">
+            Ready to Build Something Great?
+          </h3>
+
+          <p class="card-text mb-4">
+            Whether you need a custom application, a website redesign, or
+            ongoing support — we’re here to bring your vision to life.
+          </p>
+
+          <a href="contact.html" class="btn btn-primary btn-lg px-4">
+            Contact Us
+          </a>
+        </div>
+      </section>
+  </main>
 
   <footer class="bg-dark text-light pt-5 pb-4 mt-5">
     <div class="container">

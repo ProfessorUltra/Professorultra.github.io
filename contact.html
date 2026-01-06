@@ -15,47 +15,89 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 
-  <style>
-    main {
-      padding-top: 72px;
-    }
-
-    /* offset for fixed navbar */
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.5);
-    }
-  </style>
+  <link rel="icon" href="images/cf favicon 32x32.png" sizes="32x32" />
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="index.html">CotForge</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Services
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded">
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
-              <li><a class="dropdown-item" href="custom-software.html">Custom Software</a></li>
-              <li><a class="dropdown-item" href="api-integration.html">API Integration</a></li>
-              <li><a class="dropdown-item" href="maintenance-support.html">Maintenance & Support</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="showcase.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary px-3" href="contact.html">Contact</a></li>
-        </ul>
+<nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <!-- Logo icon -->
+          <img
+            src="images/cf logo.jpg"
+            alt="CotForge Logo"
+            width="30"
+            height="30"
+            class="me-2"
+          />
+          CotForge</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow rounded"
+              >
+                <li>
+                  <a class="dropdown-item" href="web-development.html"
+                    >Web Development</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="custom-software.html"
+                    >Custom Software</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="api-integration.html"
+                    >API Integration</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="system-modernization.html"
+                    >System Modernization &amp; Performance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="maintenance-support.html"
+                    >Maintenance & Support</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="showcase.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary px-3" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <main>
 
@@ -67,7 +109,22 @@
     background-position: center;">
       <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div> -->
 
-          <section class="position-relative text-light" style="
+                          <section class="hero-banner text-light d-flex align-items-center position-relative" 
+                    style="background-image: url('images/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg?auto=format&fit=crop&w=1950&q=80'); 
+                  min-height: 50vh; background-size: cover; background-position: center;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
+    <div class="container text-center position-relative" style="max-width: 900px; padding: 0 1rem; z-index: 2;">
+      <h1 class="fw-bold mb-3" data-aos="fade-down" data-aos-duration="1200" style="font-size: clamp(2rem,5vw,3rem);">
+        Get in Touch</h1>
+      <p class="lead mb-4 text-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200"
+        style="line-height:1.6; font-size: clamp(1rem,2vw,1.25rem);">
+        Have a project in mind or need help refining an idea?
+          Let’s discuss how we can build something reliable, scalable, and effective.
+      </p>
+    </div>
+    </section>
+
+          <!-- <section class="position-relative text-light" style="
     height: 360px;
     background-image: url('images/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg?auto=format&fit=crop&w=1950&q=80');
     background-size: cover;
@@ -83,7 +140,7 @@
           Let’s discuss how we can build something reliable, scalable, and effective.
         </p>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Info Cards -->
     <section class="container py-5" data-aos="fade-up">
@@ -109,17 +166,25 @@
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact-section" class="container py-5" data-aos="fade-up">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+<!-- Contact Form -->
+<section id="contact-section" class="container" data-aos="fade-up">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4 p-md-5">
+
           <h2 class="text-center mb-3">Send Us a Message</h2>
-          <p class="text-center text-secondary mb-5">
+          <p class="text-center text-secondary mb-4 text-white">
             Fill out the form below and we’ll respond as soon as possible.
           </p>
 
-          <form action="https://formsubmit.co/thehappysoftwaredeveloper@gmail.com" method="POST"
-            class="needs-validation" novalidate>
+          <form
+            action="https://formsubmit.co/thehappysoftwaredeveloper@gmail.com"
+            method="POST"
+            class="needs-validation text-start"
+            novalidate
+          >
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://professorultra.github.io/thankyou.html">
 
@@ -129,6 +194,7 @@
                 <input type="text" class="form-control" id="name" name="name" required>
                 <div class="invalid-feedback">Please enter your name.</div>
               </div>
+
               <div class="col-md-6">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="email" name="email" required>
@@ -152,13 +218,17 @@
               Send Message
             </button>
 
-            <p class="text-center text-secondary small mt-3">
+            <p class="text-center text-secondary small mt-3 mb-0">
               We typically respond within 24 hours.
             </p>
+
           </form>
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
   </main>
 
