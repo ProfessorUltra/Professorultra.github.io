@@ -212,7 +212,7 @@ h2 {
   background-color: var(--secondary-color);
 }
 
-.contact-card h5 {
+.contact-card h3, .contact-card h5 {
   color: var(--accent-color);
 }
 
@@ -224,7 +224,7 @@ h2 {
   background-color: var(--accent-color);
 }
 
-.contact-card:hover h5,
+.contact-card:hover h3, .contact-card:hover h5,
 .contact-card:hover p {
   color: var(--secondary-color);
   transition: color 0.5s;
@@ -267,7 +267,7 @@ section.text-center.px-md-5 {
   cursor: pointer;
 }
 
-.service-card h5,
+.service-card h3, .service-card h5,
 .service-card p {
   color: #000;
   /* default black */
@@ -280,7 +280,7 @@ section.text-center.px-md-5 {
   color: #ffffff;
 }
 
-.service-card:hover h5,
+.service-card:hover h3, .service-card:hover h5,
 .service-card:hover p {
   color: #fff;
   /* white on hover */
@@ -451,7 +451,7 @@ body {
   height: 300px; /* fixed height for demo */
 }
 
-.carousel-card h5 {
+.carousel-card h3, .carousel-card h5 {
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
@@ -658,4 +658,13 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.text-pop{color:#333333}
+
+.text-pop-background{
+  background-color:#ed993f;
+  border-left: 25px solid #333333;
+  border-right: 25px solid #333333;
+  
 }
