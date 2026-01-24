@@ -15,6 +15,12 @@
     content="CotForge builds modern, responsive, and SEO-friendly websites for small businesses and startups. Custom design, performance-focused development, and ongoing support."
   />
 
+      <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <link rel="preload" as="image" href="images/Web Development Shrunk.jpg?auto=format&fit=crop&w=1600&q=8">
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7DMKD68TB"></script>
 <script>
@@ -70,6 +76,9 @@
     href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css"
     rel="stylesheet"
   />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -150,8 +159,15 @@
     <!-- <section class="hero-banner text-light d-flex align-items-center position-relative" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80'); 
                   min-height: 50vh; background-size: cover; background-position: center;"> -->
 
-    <section class="hero-banner text-light d-flex align-items-center position-relative" style="background-image: url('images/Web\ Development\ Shrunk.jpg?auto=format&fit=crop&w=1950&q=80'); 
-                  min-height: 50vh; background-size: cover; background-position: center;">
+  <section class="hero-banner text-light d-flex align-items-center position-relative" style="
+        min-height: 50vh;
+        background-size: cover;
+        background-position: center;
+      ">
+
+            <img src="images/Web Development Shrunk.jpg?auto=format&fit=crop&w=1600&q=8" alt="Hero Banner" loading="eager"
+        fetchpriority="high"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
       <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.55);"></div>
       <div class="container text-center position-relative">
         <h1 class="fw-bold mb-3" data-aos="fade-down" data-aos-duration="1200" style="font-size: clamp(2rem,5vw,3rem);">
@@ -167,7 +183,7 @@
         <div class="row g-4">
           <div class="col-md-6 col-lg-3" data-aos="fade-up">
             <div class="card h-100 p-4 shadow-sm text-center">
-              <i class="fa-solid fa-screwdriver-wrench fa-2x text-primary mb-3"></i>
+              <i class="fa-solid fa-globe fa-2x text-primary mb-3"></i>
               <h5 class="fw-semibold">Custom Websites</h5>
               <p class="small card-text">
                 We create tailored websites designed to match your brand and meet your business goals.
@@ -177,7 +193,7 @@
 
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="card h-100 p-4 shadow-sm text-center">
-              <i class="fa-solid fa-plug-circle-bolt fa-2x text-primary mb-3"></i>
+              <i class="fa-solid fa-mobile-screen fa-2x text-primary mb-3"></i>
               <h5 class="fw-semibold">Responsive Design</h5>
               <p class="small card-text">
                 All our websites are fully responsive and optimized for desktops, tablets, and mobile
@@ -188,7 +204,7 @@
 
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
             <div class="card h-100 p-4 shadow-sm text-center">
-              <i class="fa-solid fa-chart-simple fa-2x text-primary mb-3"></i>
+              <i class="fa-solid fa-gauge-high fa-2x text-primary mb-3"></i>
               <h5 class="fw-semibold">Performance & SEO</h5>
               <p class="small card-text">
                 We build fast, SEO-friendly websites that rank well on search engines and provide
@@ -199,7 +215,7 @@
 
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
             <div class="card h-100 p-4 shadow-sm text-center">
-              <i class="fa-solid fa-shield-halved fa-2x text-primary mb-3"></i>
+              <i class="fa-solid fa-screwdriver-wrench fa-2x text-primary mb-3"></i>
               <h5 class="fw-semibold">Maintenance & Support</h5>
               <p class="small card-text">
                 Ongoing updates and technical support ensure your website remains secure and up-to-date.
