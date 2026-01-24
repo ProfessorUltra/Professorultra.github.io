@@ -271,15 +271,16 @@
             Fill out the form below and we’ll respond as soon as possible.
           </p>
 
-          <form
-            action="https://formsubmit.co/hello@cotforge.co.za"
-            method="POST"
+          <form action="https://api.web3forms.com/submit" method="POST"
             class="needs-validation text-start"
             novalidate
           >
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New CotForge Contact Request">
-            <input type="hidden" name="_next" value="https://cotforge.co.za/thankyou.html">
+            <input type="hidden" name="access_key" value="6be2c56c-a9e6-4273-83c8-6fbc19b135b5">
+            <input type="hidden" name="from_name" value="CotForge Website">
+            <input type="hidden" name="subject" value="New Submission from CotForge Contact Page">
+
+            <!-- Custom URL -->
+            <input type="hidden" name="redirect" value="https://cotforge.co.za/thankyou.html">
 
             <div class="row g-3 mb-3">
               <div class="col-md-6">
